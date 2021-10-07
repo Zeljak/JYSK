@@ -1,0 +1,539 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@import "./_utilities";
+
+@import "../node_modules/bulma/bulma";
+
+//GENERAL
+.body {
+  max-width: 100vw;
+  margin: 0;
+}
+
+.hero {
+  background: url(../_assets/images/header-fix-position.png) no-repeat center;
+  background-size: auto 100%;
+  width: 100%;
+  padding: 0;
+}
+
+h1 {
+  font-family: $family-primary;
+  color: white;
+  text-transform: uppercase;
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 102px;
+    line-height: 102px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 42px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 52px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 37px;
+    line-height: 40px;
+    padding-bottom: 10px;
+  }
+}
+
+h2 {
+  font-family: $family-primary;
+  color: white;
+  text-transform: uppercase;
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 62px;
+    line-height: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 37px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 53px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 27px;
+    line-height: 35px;
+    padding-bottom: 20px;
+  }
+}
+
+h3 {
+  font-family: $family-primary;
+  color: white;
+  text-transform: uppercase;
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 62px;
+    line-height: 80px;
+    padding-top: 80px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 27px;
+    line-height: 19px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 32px;
+    line-height: 28px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+    line-height: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.section {
+  padding: 0;
+  background-color: $dark-navy;
+}
+
+p {
+  background-color: $dark-navy;
+  font-family: $family-third;
+  font-weight: 500;
+  color: white;
+  margin: auto;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 70px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 70px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+span {
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 32px;
+    font-weight: 700;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+h4 {
+  background-color: $dark-navy;
+  font-family: $family-third;
+  font-weight: 700;
+  color: white;
+  margin: auto;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 50px;
+    line-height: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 26px;
+    line-height: 36px;
+    padding-top: 60px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 26px;
+    line-height: 36px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.button {
+  height: 54px;
+  width: 250px;
+  display: block;
+  font-family: $family-secondary;
+  font-weight: bold;
+  line-height: 52px;
+  border-radius: 26px;
+  color: $dark-navy;
+  background-color: white;
+  padding: 0;
+  text-transform: uppercase;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 16px;
+    margin: 50px auto;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    margin: 50px auto;
+    font-size: 16px;
+  }
+
+  @media (max-width: 767px) {
+    height: 34px;
+    width: 150px;
+    font-size: 12px;
+    margin: 50px auto;
+    padding-bottom: 50px;
+  }
+}
+
+//FORM
+.form__title {
+  color: $dark-navy;
+  font-family: $family-primary;
+  text-transform: none;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 50px;
+    line-height: 31px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 37px;
+    line-height: 31px;
+    padding-top: 50px;
+  }
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 37px;
+    line-height: 31px;
+    padding-top: 50px;
+  }
+  /*mobile*/
+  @media (max-width: 767px) {
+    font-size: 22px;
+    line-height: 13px;
+    padding-top: 30px;
+  }
+}
+
+.form__question {
+  color: $dark-navy;
+  font-family: $family-primary;
+  text-transform: uppercase;
+  padding-bottom: 0;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 21px;
+    line-height: 26px;
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 20px;
+    line-height: 26px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 20px;
+    line-height: 26px;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  /*mobile*/
+  @media (max-width: 767px) {
+    font-size: 17px;
+    line-height: 26px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.form__question2 {
+  color: $dark-navy;
+  font-family: $family-third;
+  font-style: italic;
+  text-transform: none;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 20px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 10px;
+  }
+
+  /*mobile*/
+  @media (max-width: 767px) {
+    font-size: 15px;
+    line-height: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+	padding-bottom: 20px;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.button__label {
+  cursor: pointer;
+  color: $navy;
+  font-family: $family-secondary;
+  text-align: left;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    padding-left: 500px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    padding-left: 100px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    padding-left: 200px;
+  }
+
+  /*mobile*/
+  @media (max-width: 767px) {
+    margin-top: 0;
+    font-size: 15px;
+    line-height: 26px;
+    padding-left: 40px;
+  }
+}
+
+.button__label:hover {
+  color: $clear-blue;
+}
+
+input[type="radio"]:checked ~ label {
+  color: $clear-blue;
+}
+
+textarea {
+  font-family: $family-sans-serif;
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    margin-left: 500px;
+    padding-right: 400px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    padding-left: 100px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    padding-right: 300px;
+    margin-left: 200px;
+  }
+
+  /*mobile*/
+  @media (max-width: 767px) {
+    margin-left: 40px;
+    font-size: 15px;
+    padding-right: 20px;
+  }
+}
+
+.blue {
+  color: $light-navy;
+}
+
+.pravila {
+  color: $navy;
+  font-family: $family-secondary;
+  
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 20px;
+    line-height: 32px;
+    padding-left: 500px;
+    padding-right: 500px;
+	padding-top: 200px;
+  }
+
+  /* Tablet Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  /* Tablet Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 200px;
+    padding-right: 200px;
+	padding: 200px;
+  }
+
+  /*mobile*/
+  @media (max-width: 767px) {
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 70px;
+	padding-right: 70px;
+	padding-top: 70px;
+	
+
+  }
+}
+
+input[type=checkbox] {
+	position: relative;
+	zoom: 1.5;
+
+	@media screen and (min-device-width: 1200px) and (max-device-width: 2560px) and (-webkit-min-device-pixel-ratio: 1) {
+		left: 300px;
+		bottom: 50px;
+	}
+
+	/* Tablet Landscape */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+		left: 120px;
+		bottom: 160px;
+	}
+
+	/*mobile*/
+	@media (max-width: 767px) {
+		left: 35px;
+		bottom: 30px;
+		
+	
+	  }
+}
+
+.link-pravila {
+	color: $clear-blue;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: $clear-blue;
+}
+
+//FOOTER
+.footer {
+  background-color: $white;
+}
+
+.container-footer {
+  h6,
+  a {
+    padding: 20px;
+    font-family: $family-third;
+  }
+
+  @include for-tablet-portrait-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 20px;
+  }
+
+  @include for-phone-only {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}

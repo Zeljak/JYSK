@@ -1,0 +1,36 @@
+
+//** MEDIA QUERIES **
+
+@mixin for-phone-only {
+    @media (max-width: 768px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }
+
+//** VARIABLES **
+
+$fullhd: 1200px + (2 * $gap);
+// $section-padding-desktop: 3rem 0;
+
+//colors
+$dark-navy: #000d21;
+$light-navy: #153c89;
+$navy: #011e3d;
+$clear-blue: #288bed;
+
+//font-family
+$family-primary: 'Modak', cursive;
+$family-secondary: 'Roboto', sans-serif;
+$family-third: 'Urbanist', sans-serif;
+
+
