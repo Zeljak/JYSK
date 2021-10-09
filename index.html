@@ -36,30 +36,49 @@
       href="https://fonts.googleapis.com/css2?family=Modak&display=swap"
       rel="stylesheet"
     />
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="lib/jquery.serialize-object.min.js"></script>
   </head>
 
   <body>
     <!-- hero section with title & subtitle -->
     <section class="hero is-large">
-      <div class="hero-body has-text-centered">
-        <img src="./_assets/images/oblak.png" alt="oblaci" />
+      <div class="header__clouds hero-body has-text-centered">
+        <img id="head__oblak3a" src="./_assets/images/oblak3.png" alt="oblaci" />
+        <img id="head__oblak2a" src="./_assets/images/oblak2.png" alt="oblaci" />
+        <img id="head__oblak1a" src="./_assets/images/oblak.png" alt="oblaci" />
+        <img id="head__oblak3" src="./_assets/images/oblak3.png" alt="oblaci" />
+        <img id="head__oblak2" src="./_assets/images/oblak2.png" alt="oblaci" />
+        <img id="head__oblak1" src="./_assets/images/oblak.png" alt="oblaci" />
         <h1>DOBRODOŠLI u JYSK</h1>
         <h1>školu spavanja</h1>
         <h3>Otkrij nam kako spavaš</h3>
         <h2>i osvoji JYSK NAGRADU</h2>
-        <video
-          class="video"
-          src="./_assets/video/JYSK_night_logo_intro.mp4"
-          type="video/mp4"
-          autoplay
-          muted
-          loop
-          width="100%"
-          height="auto"
-        >
-          Sorry, your browser does not support the video tag.
-        </video>
       </div>
+      <div class="stars__wrapper"></div>
+      <div class="stars__repo is-hidden">
+        <img class="star" src="./_assets/images/star_1.png">
+        <img class="star" src="./_assets/images/star_2.png">
+        <img class="star" src="./_assets/images/star_3.png">
+        <img class="star" src="./_assets/images/star_4.png">
+        <img class="star" src="./_assets/images/star_5.png">
+      </div>
+    </section>
+    
+    <section class="video__wrapper">
+      <video
+        class="video"
+        autoplay
+        muted
+        loop
+        width="100%"
+        height="auto"
+      >
+        <source src="./_assets/video/JYSK_night_logo_intro.mp4" type="video/mp4">
+        <source src="./_assets/video/JYSK_night_logo_intro_640x360.mp4" type="video/mp4">
+        Sorry, your browser does not support the video tag.
+      </video>
     </section>
 
     <!-- TEXT BLOCK   -->
@@ -81,21 +100,33 @@
             vas pitamo kako stvarno spavate. Riješite anketu - provjerite
             spavate li dobro i sudjelujte u našem jednostavnom natječaju.
           </p>
-          <p><span>Možda baš vi osvojite vrijedan JYSK poklon bon.</span></p>
-          <a href="#anketa" class="button">ispuni anketu</a>
-          <img src="./_assets/images/oblaci.jpg" alt="" />
+          <h4>Možda baš vi osvojite vrijedan JYSK poklon bon.</h4>
+          <a href="#anketa" id="anketa__button" class="button">ispuni anketu</a>
         </div>
       </div>
     </section>
+    
+    <div class="oblaci__srednji">
+      <img id="head__oblak4" src="./_assets/images/oblak3.png" alt="oblaci" />
+      <img id="head__oblak4a" src="./_assets/images/oblak3.png" alt="oblaci" />
+      <img id="head__oblak6" src="./_assets/images/oblak3.png" alt="oblaci" />
+      <img id="head__oblak5" src="./_assets/images/oblak2.png" alt="oblaci" />
+      <img id="head__oblak7" src="./_assets/images/oblak.png" alt="oblaci" />
+      <img id="head__oblak8" src="./_assets/images/oblak2.png" alt="oblaci" />
+      <img id="head__oblak9" src="./_assets/images/oblak.png" alt="oblaci" />
+      <div class="stars__wrapper_2"></div>
+      <img src="./_assets/images/nebo_sredina.jpg" alt="" />
+    </div>
 
     <!-- form block -->
-    <section>
-      <div class="form-wrapper">
-        <form>
-          <h2 id="#anketa" class="form__title has-text-centered">
-            ISPUNI Anketu
+    <section class="form__background">
+      <div class="form-wrapper is-flex is-justify-content-center">
+        <form id="jysk-anketa">
+          <h2 id="anketa" class="form__title has-text-centered">
+            ISPUNI ANKETU
           </h2>
 
+          <!-- Spol -->
           <h3 class="form__question">ti si?</h3>
           <div>
             <input
@@ -118,6 +149,7 @@
             <label for="muskarac" class="button__label">B. Muškarac</label>
           </div>
 
+          <!-- Godina -->
           <h3 class="form__question">Koliko imaš godina?</h3>
           <div>
             <input
@@ -162,6 +194,7 @@
             <label for="vise_od_40" class="button__label">D. Više od 40</label>
           </div>
 
+          <!-- Regija -->
           <h3 class="form__question">Iz koje si regije?</h3>
           <div>
             <input
@@ -222,12 +255,13 @@
             >
           </div>
 
+          <!-- Sati spavanja -->
           <h3 class="form__question">Koliko u prosjeku sati dnevno spavaš?</h3>
           <div>
             <input
               type="radio"
               id="do-osam"
-              name="sati-spavanja"
+              name="sati_spavanja"
               value="do-osam"
               class="form__answer"
             />
@@ -237,7 +271,7 @@
             <input
               type="radio"
               id="od-sest-do-osam"
-              name="sati-spavanja"
+              name="sati_spavanja"
               value="od-sest-do-osam"
               class="form__answer"
             />
@@ -249,7 +283,7 @@
             <input
               type="radio"
               id="do-sest"
-              name="sati-spavanja"
+              name="sati_spavanja"
               value="do-sest"
               class="form__answer"
             />
@@ -261,7 +295,7 @@
             <input
               type="radio"
               id="kako-kad"
-              name="sati-spavanja"
+              name="sati_spavanja"
               value="kako-kad"
               class="form__answer"
             />
@@ -270,6 +304,7 @@
             >
           </div>
 
+          <!-- Isto vrijeme -->
           <h3 class="form__question">
             Ideš li spavati uvijek otprilike u isto vrijeme?
           </h3>
@@ -277,7 +312,7 @@
             <input
               type="radio"
               id="da-isto-vrijeme"
-              name="isto-vrijeme"
+              name="isto_vrijeme"
               value="da-isto-vrijeme"
               class="form__answer"
             />
@@ -287,7 +322,7 @@
             <input
               type="radio"
               id="ne-isto-vrijeme"
-              name="isto-vrijeme"
+              name="isto_vrijeme"
               value="ne-isto-vrijeme"
               class="form__answer"
             />
@@ -297,7 +332,7 @@
             <input
               type="radio"
               id="ne-pratim-isto-vrijeme"
-              name="isto-vrijeme"
+              name="isto_vrijeme"
               value="ne-pratim-isto-vrijeme"
               class="form__answer"
             />
@@ -306,6 +341,7 @@
             >
           </div>
 
+          <!-- Nesanica -->
           <h3 class="form__question">Patiš li od nesanice?</h3>
           <div>
             <input
@@ -350,12 +386,13 @@
             <label for="nesanica-nikad" class="button__label">D. Nikad</label>
           </div>
 
+          <!-- Dobar san -->
           <h3 class="form__question">Što ti je važno za dobar san?</h3>
           <div>
             <input
               type="radio"
               id="dobar-san-krevet"
-              name="dobar-san"
+              name="dobar_san"
               value="dobar-san-krevet"
               class="form__answer"
             />
@@ -367,7 +404,7 @@
             <input
               type="radio"
               id="dobar-san-atmosfera"
-              name="dobar-san"
+              name="dobar_san"
               value="dobar-san-atmosfera"
               class="form__answer"
             />
@@ -379,7 +416,7 @@
             <input
               type="radio"
               id="dobar-san-temperatura"
-              name="dobar-san"
+              name="dobar_san"
               value="dobar-san-temperatura"
               class="form__answer"
             />
@@ -391,7 +428,7 @@
             <input
               type="radio"
               id="dobar-san-partner"
-              name="dobar-san"
+              name="dobar_san"
               value="dobar-san-partner"
               class="form__answer"
             />
@@ -403,7 +440,7 @@
             <input
               type="radio"
               id="dobar-san-sve"
-              name="dobar-san"
+              name="dobar_san"
               value="dobar-san-sve"
               class="form__answer"
             />
@@ -412,6 +449,7 @@
             >
           </div>
 
+          <!-- Madrac -->
           <h3 class="form__question">Koliko je star madrac na kojem spavaš?</h3>
           <div>
             <input
@@ -462,6 +500,7 @@
             >
           </div>
 
+          <!-- Jastuk -->
           <h3 class="form__question">
             Kad si posljednji put zamijenio/la jastuk na kojem spavaš?
           </h3>
@@ -502,16 +541,17 @@
           <div>
             <input
               type="radio"
-              id="madrac-stariji-deset"
-              name="madrac"
-              value="madrac-stariji-deset"
+              id="jastuk-stariji-pet"
+              name="jastuk"
+              value="jastuk-stariji-pet"
               class="form__answer"
             />
-            <label for="madrac-stariji-deset" class="button__label"
+            <label for="jastuk-stariji-pet" class="button__label"
               >D. Moj je jastuk stariji od pet godina</label
             >
           </div>
 
+          <!-- San -->
           <h3 class="form__question">
             Znaš li da premalo spavanja i loš san mogu uzrokovati veliku štetu
             zdravlju organizma?
@@ -530,13 +570,14 @@
             <input
               type="radio"
               id="los-san-ne"
-              name="spol"
+              name="san"
               value="los-san-ne"
               class="form__answer"
             />
             <label for="los-san-ne" class="button__label">B. Ne</label>
           </div>
 
+          <!-- Bolovi -->
           <h3 class="form__question">
             Budiš li se ujutro s bolovima u leđima?
           </h3>
@@ -561,6 +602,7 @@
             <label for="bolovi-ne" class="button__label">B. Ne</label>
           </div>
 
+          <!-- Soba -->
           <h3 class="form__question">
             Kako bi ocijenio/la uvjete spavanja u svojoj sobi?
           </h3>
@@ -578,13 +620,14 @@
             <input
               type="radio"
               id="soba-losa"
-              name="bolovi"
+              name="soba"
               value="soba-losa"
               class="form__answer"
             />
             <label for="soba-losa" class="button__label">B. Loši</label>
           </div>
 
+          <!-- Pospanost -->
           <h3 class="form__question">
             Uhvati li te i, ako da, koliko često dnevna pospanost?
           </h3>
@@ -597,9 +640,7 @@
               class="form__answer"
             />
             <label
-              for="              value="
-              pospanost-nikada
-              class="button__label"
+              for="pospanost-nikada" class="button__label"
               >A. Nikada</label
             >
           </div>
@@ -628,49 +669,50 @@
             >
           </div>
 
-          <h3 class="form__question2">
+          <!-- Problem -->
+          <h3 class="text__first form__question2">
             Navedi nam problem koji te najviše muči kada je spavanje u pitanju?
           </h3>
-          <textarea rows="10" cols="30">Upiši svoj odgovor</textarea>
+          <textarea name="problem" id="problem" rows="10" cols="30" placeholder="Upiši svoj odgovor"></textarea>
 
-          <h3 class="form__question2">
+          <!-- Idealna soba -->
+          <h3 class="text__second form__question2">
             Opiši kako zamišljaš idealnu spavaću sobu - krevet, madrac, jastuk za tvoj savršen san.
           </h3>
-          <textarea rows="10" cols="30">Upiši svoj odgovor</textarea>
-        </form>
+          <textarea name="idealna_soba" id="idealna_soba" rows="10" cols="30" placeholder="Upiši svoj odgovor"></textarea>
+          
+          <div class="text__second">
+            <span class="napomena blue">	Napomena:<br>najkreativniji odgovor nagrađujemo JYSK poklon bonom!</span>
+          </div>
+    
+          <!-- Pravila privatnosti -->
+          <div class="pravila__wrapper is-flex is-justify-content-center">
+            <div class="pravila__checkbox">
+              <input type="checkbox" id="pravila" name="pravila" value="prihvacam">
+              <label for="pravila" id="pravila"></label>
+            </div>
+            <div>
+              <h6 class="pravila">Prihvaćam <a class="link-pravila" href="#"> pravila privatnosti</a> AMZ-a i <a class="link-pravila" href="#">pravila kreativnog natječaja</a> i razumijem da će podaci u ovoj anketi biti podijeljeni s brendom JYSK.</h6>
+            </div>
+          </div>
+    
+          <div><input type="submit" id="submit-form" class="button button--inverse" value="Pošalji prijavu"></div>
+    
+          <!-- Messages and loading -->
+          <div class="is-flex is-justify-content-center">
+            <div id="loading-indicator" class="is-hidden lds-ripple"><div></div><div></div><div></div><div></div></div>
+          </div>
+          <h6 class="is-hidden has-text-centered" id="error-msg" class="">Morate prihvatiti pravila privatnosti i kreativnog natječaja!</h6>
+          <h6 class="is-hidden has-text-centered" id="response-msg" class="">Vaša prijava je spremljena. Hvala na sudjelovanju!</h6>
       </div>
-    </section>
-
-	<section>
-		<div>
-			<h3 class="form__question2 has-text-centered">
-			<span class="blue">	Napomena: 
-					najkreativniji odgovor nagrađujemo
-				JYSK poklon bonom!</span>
-			</h3>
-		</div>
-	</section>
-
-	<!-- pravila privatnosti -->
-	<section>
-		<div>
-		<h6 class="has-text-centered pravila">Prihvaćam <a class="link-pravila" href="#"> pravila privatnosti</a> AMZ-a i <a class="link-pravila" href="#">pravila kreativnog natječaja</a> i razumijem da će podaci u ovoj anketi biti podijeljeni s brendom JYSK.</h6>
-		</div>
-	</section>
-
-	<section>
-		<div>
-			<form action="">
-				<input type="checkbox" id="pravila" name="pravila" value="prihvacam">
-				<label for="pravila" id="pravila"></label>
 		</form>
-		</div>
 	</section>
 
-    <!--  FOOTER -->
-    <footer class="footer has-text-centered">
-      <div class="container-footer">
-        <h6>Sadržaj nastao u suradnji</h6>
+  <!--  FOOTER -->
+  <footer class="footer has-text-centered">
+    <div class="container-footer">
+      <h6>Sadržaj nastao u suradnji</h6>
+      <div class="branding">
         <a href="http://www.adriamedia.hr" target="_blank"
           ><img src="./_assets/images/amz-logo.png" alt="AMZ Native Studio"
         /></a>
@@ -678,8 +720,20 @@
           ><img src="./_assets/images/logo-JYSK.png" alt="JYSK logo" />
         </a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script type="text/javascript" src="lib/main.js"></script>
+  <div class="oblaci__donji">
+    <img id="head__oblak12" src="./_assets/images/oblak2.png" alt="oblaci" />
+    <img id="head__oblak11" src="./_assets/images/oblak.png" alt="oblaci" />
+    <img id="head__oblak10" src="./_assets/images/oblak3.png" alt="oblaci" />
+  </div>
+
+  <!-- GSAP-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <!-- Main -->
+  <script type="text/javascript" src="lib/main.js"></script>
+
   </body>
 </html>
