@@ -157,8 +157,12 @@ if(document.querySelector('#jysk-anketa')) {
 }
 
 // Stars animation header
-var vw = window.innerWidth;
-var vh = window.innerHeight;
+// var vw = window.innerWidth;
+var vw = document.querySelector('.stars__wrapper').offsetWidth;
+var vw2 = document.querySelector('.stars__wrapper_2').offsetWidth;
+// var vh = window.innerHeight;
+var vh = document.querySelector('.stars__wrapper').offsetHeight - 20;
+var vh2 = document.querySelector('.stars__wrapper_2').offsetHeight - 20;
 
 var textures = document.querySelectorAll(".star");
 var main = document.querySelector(".stars__wrapper");
@@ -235,8 +239,8 @@ function createStar() {
     xPercent: -50,
     yPercent: -50,
     scale: 0,
-    x: random(vw),
-    y: random(vh),
+    x: random(vw2),
+    y: random(vh2),
   });
   
   var tl = new TimelineMax({ repeat: -1, yoyo: true });
