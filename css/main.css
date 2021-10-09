@@ -11887,7 +11887,7 @@ body {
   position: relative;
 }
 .hero::after {
-  background: url(../_assets/images/header-fix-position.png) no-repeat bottom;
+  background: url(../assets/images/header-fix-position.png) no-repeat bottom;
   background-size: cover;
   content: "";
   display: block;
@@ -12256,7 +12256,7 @@ h4 {
 }
 
 .form__background {
-  background: url("../_assets/images/anketa_bg1.jpg") no-repeat -15% 15%/65%, url("../_assets/images/anketa_bg2.jpg") no-repeat 160% 55%/65%, url("../_assets/images/anketa_bg3.jpg") no-repeat -25% 98%/45%;
+  background: url("../assets/images/anketa_bg1.jpg") no-repeat -15% 15%/65%, url("../assets/images/anketa_bg2.jpg") no-repeat 160% 55%/65%, url("../assets/images/anketa_bg3.jpg") no-repeat -25% 98%/45%;
 }
 
 #jysk-anketa {
@@ -12440,24 +12440,10 @@ textarea {
   border: solid 0.1px #153c89;
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
+  padding: 20px;
   resize: none;
   width: 100%;
   border-radius: 3px;
-}
-textarea::-webkit-input-placeholder {
-  padding: 20px;
-}
-textarea::-moz-placeholder {
-  padding: 20px;
-}
-textarea:-ms-input-placeholder {
-  padding: 20px;
-}
-textarea::-ms-input-placeholder {
-  padding: 20px;
-}
-textarea::placeholder {
-  padding: 20px;
 }
 textarea:focus, textarea:focus-visible {
   border: solid 0.1px #153c89;
@@ -12557,6 +12543,7 @@ a:hover {
   color: #153c89;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  padding-top: 40px;
   /* Tablet Portrait */
   /* Tablet Landscape */
   /*mobile*/

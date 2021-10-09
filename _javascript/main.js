@@ -1,7 +1,9 @@
 // Anketa
 document.querySelector('#submit-form').addEventListener('click', function(e){
 
-  const url = 'https://script.google.com/macros/s/AKfycbwEw-55-WS8LhedHsPBo3q4ljYYipAqzwtksbSs4ej1DX3-mUJcyOH67WgBgRkXt6vK0w/exec';
+  // const url = 'https://script.google.com/macros/s/AKfycbwEw-55-WS8LhedHsPBo3q4ljYYipAqzwtksbSs4ej1DX3-mUJcyOH67WgBgRkXt6vK0w/exec';
+  const url = 'https://script.google.com/macros/s/AKfycbxhejBjDAXcYtGzIN51SSj4SXUGcGkkNahcJCM6kCW0TSLz6plKXwPD1pUsaRgbZ7Kk/exec';
+  
 
   e.preventDefault();
 
@@ -10,6 +12,8 @@ document.querySelector('#submit-form').addEventListener('click', function(e){
       document.querySelector('#submit-form').classList.add('is-hidden');
       document.querySelector('#error-msg').classList.add('is-hidden');
       document.querySelector('#loading-indicator').classList.remove('is-hidden');
+
+      console.log($('form#jysk-anketa').serializeJSON());
 
       fetch(url,{
         method: 'POST',
