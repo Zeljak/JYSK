@@ -11488,6 +11488,8 @@ body {
 }
 
 .oblaci__srednji {
+  background: url("../assets/images/nebo_sredina.jpg") no-repeat center/cover;
+  height: 69vw;
   position: relative;
 }
 
@@ -11887,7 +11889,7 @@ body {
   position: relative;
 }
 .hero::after {
-  background: url(../assets/images/header-fix-position.png) no-repeat bottom;
+  background: url("../assets/images/header-fix-position.png") no-repeat bottom;
   background-size: cover;
   content: "";
   display: block;
