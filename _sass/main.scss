@@ -34,16 +34,20 @@ $primary-invert: $pink-invert;
 
 //GENERAL
 body {
+  background-color: white;
   max-width: 100vw;
   margin: 0;
   overflow: hidden;
+  z-index: -5;
 }
 
 //Oblaci
 .oblaci__donji {
+  // background-color: white;
   height: 50vw;
   margin-top: -175px;
   position: relative;
+  z-index: 2;
 
   @include for-phone-only {
     margin-top: -5px;
@@ -68,6 +72,7 @@ body {
   &1a {
     left: 47vw;
     top: 10%;
+    opacity: .77;
     width: 44.5vw;
     animation: oblak1a 12s linear forwards;
   }
@@ -78,6 +83,7 @@ body {
   &1 {
     left: -44.5vw;
     top: 10%;
+    opacity: .77;
     width: 44.5vw;
     animation: oblak1 45s linear 5s infinite;
   }
@@ -180,6 +186,7 @@ body {
   &7 {
     // left: 40vw;
     left: -37vw;
+    opacity: .77;
     top: 10%;
     width: 37vw;
     z-index: 1;
@@ -206,6 +213,7 @@ body {
   &9 {
     // left: 50vw;
     left: -65vw;
+    opacity: .77;
     top: 40%;
     width: 65vw;
     z-index: 1;
@@ -256,6 +264,10 @@ body {
   width: 100%;
 }
 
+.stars__wrapper {
+  z-index: 4;
+}
+
 .star {
   position: absolute;
   visibility: hidden;
@@ -268,6 +280,7 @@ body {
   width: 100%;
   padding: 0;
   position: relative;
+  z-index: 3;
 
   &::after {
     background: url('../assets/images/header-fix-position.png') no-repeat bottom;
@@ -279,12 +292,12 @@ body {
     top: 0;
     width: 100%;
     height: 115%;
-    z-index: -1;
+    z-index: 3;
   }
 }
 
 .hero.is-large .header__clouds {
-  z-index: 2;
+  z-index: 5;
 
   h1, h2 , h3 {
     margin-left: auto;
@@ -428,7 +441,7 @@ h3 {
   background-color: $dark-navy;
   position: relative;
   top: 20%;
-  z-index: -2;
+  z-index: 2;
 }
 
 .oblaci__srednji {
@@ -618,9 +631,13 @@ h4 {
 
 // Anketa
 .form__background {
-  background: url('../assets/images/anketa_bg1.jpg') no-repeat -15% 15% / 65%,
-              url('../assets/images/anketa_bg2.jpg') no-repeat 160% 55% / 65%,
-              url('../assets/images/anketa_bg3.jpg') no-repeat -25% 98% / 45%,
+  // background: url('../assets/images/anketa_bg1.jpg') no-repeat -15% 15% / 65%,
+  //             url('../assets/images/anketa_bg2.jpg') no-repeat 160% 55% / 65%,
+  //             url('../assets/images/anketa_bg3.jpg') no-repeat -25% 98% / 45%,
+  // ;
+  background: url('../assets/images/anketa_bg1_2k.jpg') no-repeat -15% 15% / 65%,
+              url('../assets/images/anketa_bg2_2k.jpg') no-repeat 160% 55% / 65%,
+              url('../assets/images/anketa_bg3_2k.jpg') no-repeat -25% 98% / 45%,
   ;
 }
 
@@ -953,6 +970,8 @@ a:hover {
 .footer {
   background-color: rgba(0, 0, 0, 0);
   padding-top: 100px;
+  position: relative;
+  z-index: 3;
 
   @include for-phone-only {
     padding: 20px 0;

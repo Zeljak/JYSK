@@ -39,102 +39,18 @@ document.querySelector('#submit-form').addEventListener('click', function(e){
 var viewWidth = document.querySelector('body').offsetWidth;
 
 // Window resize
-let resizeTimer;
+var resizeTimer;
 
 window.addEventListener('resize', function() {
 
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(function() {
   
-      viewWidth = document.querySelector('body').offsetWidth;
-
-      // headOblak1.invalidate();
-      // gsap.set('#head__oblak1', {
-      //   x: .95 * viewWidth
-      // });
-      // headOblak1.restart();
-
-      // headOblak2.invalidate();
-      // gsap.set('#head__oblak2', {
-      //   x: .65 * viewWidth
-      // });
-      // headOblak2.restart();
-
-      // headOblak3.invalidate();
-      // gsap.set('#head__oblak3', {
-      //   x: .35 * viewWidth
-      // });
-      // headOblak3.restart();
+    location.reload();
        
   }, 250);
 
 });
-
-// Animations
-// gsap.set('#head__oblak1', {
-//   x: .95 * viewWidth
-// });
-
-// gsap.set('#head__oblak2', {
-//   x: .65 * viewWidth
-// });
-
-// gsap.set('#head__oblak3', {
-//   x: .35 * viewWidth
-// });
-
-// var headOblak1 = gsap.timeline ()
-//     .to('#head__oblak1',{
-//         x: (viewWidth  + (.5 * viewWidth)),
-//         duration:10,
-//         ease:"none"
-//     })
-//     .set('#head__oblak1', {
-//       x: 0
-//     })
-//     .to('#head__oblak1',{
-//         x: (viewWidth  + (.445 * viewWidth)),
-//         duration:30,
-//         ease:"none",
-//         modifiers: {
-//           x: gsap.utils.unitize(x => parseFloat(x) % (viewWidth  + (.445 * viewWidth)))
-//         },
-//         repeat:-1
-//     });
-
-// var headOblak2 = gsap.timeline ()
-//     .to('#head__oblak2',{
-//       x: (viewWidth  + (.45 * viewWidth)),
-//       duration:21,
-//       ease:"none"
-//     })
-//     .set('#head__oblak2', {
-//       x: 0
-//     })
-//     .to('#head__oblak2',{
-//         x: (viewWidth  + (.424 * viewWidth)),
-//         duration:33,
-//         delay:0,
-//         ease:"none",
-//         repeat:-1
-//     });
-
-// var headOblak3 = gsap.timeline ()
-//     .to('#head__oblak3',{
-//       x: (viewWidth  + (.35 * viewWidth)),
-//       duration:32,
-//       ease:"none"
-//     })
-//     .set('#head__oblak3', {
-//       x: 0
-//     })
-//     .to('#head__oblak3',{
-//         x: (viewWidth  + (.32 * viewWidth)),
-//         duration:35,
-//         delay:0,
-//         ease:"none",
-//         repeat:-1
-//     });
 
 // Anketa Smooth Scroll
 if(document.querySelector('#jysk-anketa')) {
@@ -162,7 +78,7 @@ var vw = document.querySelector('.stars__wrapper').offsetWidth;
 var vw2 = document.querySelector('.stars__wrapper_2').offsetWidth;
 // var vh = window.innerHeight;
 var vh = document.querySelector('.stars__wrapper').offsetHeight - 20;
-var vh2 = document.querySelector('.stars__wrapper_2').offsetHeight - 20;
+var vh2 = document.querySelector('.stars__wrapper_2').offsetHeight - (0.07 * viewWidth);
 
 var textures = document.querySelectorAll(".star");
 var main = document.querySelector(".stars__wrapper");
@@ -214,8 +130,6 @@ function onLoad() {
   
   main.appendChild(frag);
   main2.appendChild(frag2);
-  // Array.from(main)[0].appendChild(frag);
-  // Array.from(main)[1].appendChild(frag2);
 }
 
 function createStar() {
@@ -281,71 +195,3 @@ function random(min, max) {
   if (min > max) { var tmp = min; min = max; max = tmp; }
   return min + (max - min) * Math.random();
 }
-
-// Stars animation stars middle
-// var textures2 = document.querySelectorAll(".star2");
-// var main2 = document.querySelector(".stars__wrapper_2");
-// var frag2 = document.createDocumentFragment();
-
-// var stars2 = [];
-// var eases2 = [];
-
-// for (var i = 0; i < numAnimations; i++) {
-  
-//   eases2.push(ease);
-// }
-
-// // Wait for images to load
-// window.addEventListener("load", onLoad);
-
-// function onLoad() {
-    
-//   for (var i = 0; i < numStars; i++) {
-//     stars2.push(createStar2());
-//   }
-  
-//   main2.appendChild(frag2);
-// }
-
-// function createStar2() {
- 
-//   var index2 = random(textures2.length)|0;
-//   var star2 = textures2[index2].cloneNode(true);
-//   frag2.appendChild(star2);
-  
-//   TweenLite.set(star2, {
-//     rotation: random(360),
-//     xPercent: -50,
-//     yPercent: -50,
-//     scale: 0,
-//     x: random(vw),
-//     y: random(vh),
-//   });
-  
-//   var tl2 = new TimelineMax({ repeat: -1, yoyo: true });
-   
-//   for (var i = 0; i < numAnimations; i++) {
-    
-//     var ease1 = eases[random(numAnimations)|0];
-//     var ease2 = eases[random(numAnimations)|0];
-    
-//     var alpha = random(0.7, 1);
-//     var scale = random(0.15, 0.4);
-    
-//     var appear = "+=" + random(appearMin, appearMax);
-//     var delay = "+=" + random(delayMin, delayMax);  
-//     var duration1 = random(durationMin, durationMax);
-//     var duration2 = random(durationMin, durationMax);   
-    
-//     tl2.to(star2, duration1, { autoAlpha: alpha, scale: scale, ease: ease1 }, delay)
-//       .to(star2, duration2, { autoAlpha: 0, scale: 0, ease: ease2 }, appear)
-//   }
-    
-//   tl2.progress(random(1));
-  
-//   return {
-//     element: star2,
-//     timeline: tl2
-//   };
-// }
-

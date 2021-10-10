@@ -7,12 +7,12 @@
     <title>JYSK škola spavanja</title>
     <meta name="title" content="JYSK škola spavanja" />
     <meta name="description" content="Dobrodošli u JYSK školu spavanja" />
-    <link rel="stylesheet" href="css/main.css?v=1" />
+    <link rel="stylesheet" href="css/main.css?v=3" />
 
     <!-- Facebook -->
     <meta property="og:url" content="https://native.story.hr/preview/JYSK/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Adidas Forum" />
+    <meta property="og:title" content="JYSK škola spavanja" />
     <meta
       property="og:description"
       content="Otkrij nam kako spavaš i osvoji JYSK nagradu"
@@ -24,6 +24,9 @@
     <meta property="og:image:width" content="1280" />
     <meta property="og:image:height" content="720" />
     <meta property="fb:app_id" content="684146431996498" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon-32x32.png" sizes="32x32">
 
     <!-- Google fonts -->
     <link
@@ -45,12 +48,42 @@
     <!-- hero section with title & subtitle -->
     <section class="hero is-large">
       <div class="header__clouds hero-body has-text-centered">
-        <img id="head__oblak3a" src="./assets/images/oblak3.png" alt="oblaci" />
+        <picture>
+          <source srcset="./assets/images/oblak3.png" media="(max-width: 1024px)">
+          <source srcset="./assets/images/oblak3_2k.png">
+          <img id="head__oblak3a" src="./assets/images/oblak3_2k.png" alt="oblaci" class="image">
+        </picture>
+        <picture>
+          <source srcset="./assets/images/oblak2.png" media="(max-width: 1024px)">
+          <source srcset="./assets/images/oblak2_2k.png">
+          <img id="head__oblak2a" src="./assets/images/oblak2_2k.png" alt="oblaci" class="image">
+        </picture>
+        <picture>
+          <source srcset="./assets/images/oblak.png" media="(max-width: 1024px)">
+          <source srcset="./assets/images/oblak_2k.png">
+          <img id="head__oblak1a" src="./assets/images/oblak_2k.png" alt="oblaci" class="image">
+        </picture>
+        <picture>
+          <source srcset="./assets/images/oblak3.png" media="(max-width: 1024px)">
+          <source srcset="./assets/images/oblak3_2k.png">
+          <img id="head__oblak3" src="./assets/images/oblak3_2k.png" alt="oblaci" class="image">
+        </picture>
+        <picture>
+          <source srcset="./assets/images/oblak2.png" media="(max-width: 1024px)">
+          <source srcset="./assets/images/oblak2_2k.png">
+          <img id="head__oblak2" src="./assets/images/oblak2_2k.png" alt="oblaci" class="image">
+        </picture>
+        <picture>
+          <source srcset="./assets/images/oblak.png" media="(max-width: 1024px)">
+          <source srcset="./assets/images/oblak_2k.png">
+          <img id="head__oblak1" src="./assets/images/oblak_2k.png" alt="oblaci" class="image">
+        </picture>
+        <!-- <img id="head__oblak3a" src="./assets/images/oblak3.png" alt="oblaci" />
         <img id="head__oblak2a" src="./assets/images/oblak2.png" alt="oblaci" />
         <img id="head__oblak1a" src="./assets/images/oblak.png" alt="oblaci" />
         <img id="head__oblak3" src="./assets/images/oblak3.png" alt="oblaci" />
         <img id="head__oblak2" src="./assets/images/oblak2.png" alt="oblaci" />
-        <img id="head__oblak1" src="./assets/images/oblak.png" alt="oblaci" />
+        <img id="head__oblak1" src="./assets/images/oblak.png" alt="oblaci" /> -->
         <h1>DOBRODOŠLI u JYSK</h1>
         <h1>školu spavanja</h1>
         <h3>Otkrij nam kako spavaš</h3>
@@ -69,6 +102,8 @@
     <section class="video__wrapper">
       <video
         class="video"
+        playsinline
+        preload="auto"
         autoplay
         muted
         loop
@@ -107,13 +142,48 @@
     </section>
     
     <div class="oblaci__srednji">
-      <img id="head__oblak4" src="./assets/images/oblak3.png" alt="oblaci" />
+      <picture>
+        <source srcset="./assets/images/oblak3.png" media="(max-width: 1024px)">
+        <source srcset="./assets/images/oblak3_2k.png">
+        <img id="head__oblak4" src="./assets/images/oblak3_2k.png" alt="oblaci" class="image">
+      </picture>
+      <picture>
+        <source srcset="./assets/images/oblak3.png" media="(max-width: 1024px)">
+        <source srcset="./assets/images/oblak3_2k.png">
+        <img id="head__oblak4a" src="./assets/images/oblak3_2k.png" alt="oblaci" class="image">
+      </picture>
+      <picture>
+        <source srcset="./assets/images/oblak3.png" media="(max-width: 1024px)">
+        <source srcset="./assets/images/oblak3_2k.png">
+        <img id="head__oblak6" src="./assets/images/oblak3_2k.png" alt="oblaci" class="image">
+      </picture>
+      <picture>
+        <source srcset="./assets/images/oblak2.png" media="(max-width: 1024px)">
+        <source srcset="./assets/images/oblak2_2k.png">
+        <img id="head__oblak5" src="./assets/images/oblak2_2k.png" alt="oblaci" class="image">
+      </picture>
+      <picture>
+        <source srcset="./assets/images/oblak.png" media="(max-width: 1024px)">
+        <source srcset="./assets/images/oblak_2k.png">
+        <img id="head__oblak7" src="./assets/images/oblak_2k.png" alt="oblaci" class="image">
+      </picture>
+      <picture>
+        <source srcset="./assets/images/oblak2.png" media="(max-width: 1024px)">
+        <source srcset="./assets/images/oblak2_2k.png">
+        <img id="head__oblak8" src="./assets/images/oblak2_2k.png" alt="oblaci" class="image">
+      </picture>
+      <picture>
+        <source srcset="./assets/images/oblak.png" media="(max-width: 1024px)">
+        <source srcset="./assets/images/oblak_2k.png">
+        <img id="head__oblak9" src="./assets/images/oblak_2k.png" alt="oblaci" class="image">
+      </picture>
+      <!-- <img id="head__oblak4" src="./assets/images/oblak3.png" alt="oblaci" />
       <img id="head__oblak4a" src="./assets/images/oblak3.png" alt="oblaci" />
       <img id="head__oblak6" src="./assets/images/oblak3.png" alt="oblaci" />
       <img id="head__oblak5" src="./assets/images/oblak2.png" alt="oblaci" />
       <img id="head__oblak7" src="./assets/images/oblak.png" alt="oblaci" />
       <img id="head__oblak8" src="./assets/images/oblak2.png" alt="oblaci" />
-      <img id="head__oblak9" src="./assets/images/oblak.png" alt="oblaci" />
+      <img id="head__oblak9" src="./assets/images/oblak.png" alt="oblaci" /> -->
       <div class="stars__wrapper_2"></div>
     </div>
 
@@ -723,16 +793,31 @@
   </footer>
 
   <div class="oblaci__donji">
-    <img id="head__oblak12" src="./assets/images/oblak2.png" alt="oblaci" />
+    <picture>
+      <source srcset="./assets/images/oblak2.png" media="(max-width: 1024px)">
+      <source srcset="./assets/images/oblak2_2k.png">
+      <img id="head__oblak12" src="./assets/images/oblak2_2k.png" alt="oblaci" class="image">
+    </picture>
+    <picture>
+      <source srcset="./assets/images/oblak.png" media="(max-width: 1024px)">
+      <source srcset="./assets/images/oblak_2k.png">
+      <img id="head__oblak11" src="./assets/images/oblak_2k.png" alt="oblaci" class="image">
+    </picture>
+    <picture>
+      <source srcset="./assets/images/oblak3.png" media="(max-width: 1024px)">
+      <source srcset="./assets/images/oblak3_2k.png">
+      <img id="head__oblak10" src="./assets/images/oblak3_2k.png" alt="oblaci" class="image">
+    </picture>
+    <!-- <img id="head__oblak12" src="./assets/images/oblak2.png" alt="oblaci" />
     <img id="head__oblak11" src="./assets/images/oblak.png" alt="oblaci" />
-    <img id="head__oblak10" src="./assets/images/oblak3.png" alt="oblaci" />
+    <img id="head__oblak10" src="./assets/images/oblak3.png" alt="oblaci" /> -->
   </div>
 
   <!-- GSAP-->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <!-- Main -->
-  <script type="text/javascript" src="lib/main.js"></script>
+  <script type="text/javascript" src="lib/main.js?v=3"></script>
 
   </body>
 </html>
