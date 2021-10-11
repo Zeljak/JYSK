@@ -12450,7 +12450,7 @@ input[type=radio]:checked ~ label {
   color: #288bed;
 }
 
-textarea {
+textarea, .form__email {
   -webkit-box-shadow: 0 20px 20px 0 rgba(150, 150, 150, 0.24);
           box-shadow: 0 20px 20px 0 rgba(150, 150, 150, 0.24);
   border: solid 0.1px #153c89;
@@ -12461,7 +12461,12 @@ textarea {
   width: 100%;
   border-radius: 3px;
 }
-textarea:focus, textarea:focus-visible {
+textarea:focus, textarea:focus-visible, textarea:active, .form__email:focus, .form__email:focus-visible, .form__email:active {
+  border: solid 0.1px #153c89;
+  outline: none;
+}
+
+.form__email:focus, .form__email:focus-visible, .form__email:active {
   border: solid 0.1px #153c89;
 }
 

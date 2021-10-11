@@ -800,7 +800,7 @@ input[type="radio"]:checked ~ label {
   color: $clear-blue;
 }
 
-textarea {
+textarea, .form__email {
   box-shadow: 0 20px 20px 0 rgba(150, 150, 150, 0.24);
   border: solid 0.1px $light-navy;
   font-family: $family-sans-serif;
@@ -809,7 +809,14 @@ textarea {
   resize: none;
   width: 100%;border-radius: 3px;
 
-  &:focus, &:focus-visible {
+  &:focus, &:focus-visible, &:active {
+    border: solid 0.1px $light-navy;
+    outline: none;
+  }
+}
+
+.form__email {
+  &:focus, &:focus-visible, &:active {
     border: solid 0.1px $light-navy;
   }
 }
